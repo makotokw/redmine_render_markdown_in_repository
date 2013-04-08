@@ -13,7 +13,7 @@ RepositoriesController.class_eval do
   alias redmine_render_markdown_in_repository_orig_entry entry
   def entry
     redmine_render_markdown_in_repository_orig_entry
-    if !performed? && @path =~ /\.(?:md|markdown)$/
+    if !performed? && @path =~ /\.(?:md|markdown)$/i
       markdown = Redcarpet::Markdown.new(MarkdownRender,
                                          :tables => true, :fenced_code_blocks => true,
                                          :autolink => true, :space_after_headers => true)
