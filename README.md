@@ -35,4 +35,4 @@ cd /path/to/redmine/plugins
 git clone git://github.com/makotokw/redmine_render_markdown_in_repository.git
 ```
 
-Executes ```rake redmine:plugins:migrate RAILS_ENV=production``` and Restart Redmine.
+Restart Redmine after installing plugin.
