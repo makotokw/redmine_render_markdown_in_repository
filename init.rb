@@ -1,7 +1,7 @@
 require 'markdown/render'
 
 Redmine::Plugin.register :redmine_render_markdown_in_repository do
-  name 'Redmine Render Markdown in Repository'
+  name 'Render Markdown in Repository'
   author 'Makoto Kawasaki'
   description 'This plugin renders markdown file in repository'
   version '0.0.1'
