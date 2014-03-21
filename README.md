@@ -12,10 +12,12 @@ This plugin renders markdown file in repository.
 
 ### Install redcarpet
 
+Redmine 2.5.0 includes redcarpet already.
+
 Create ``Gemfile.local`` into ``#{RAILS_ROOT}``.
 
 ```
-gem 'redcarpet', '2.2.2'
+gem 'redcarpet', '~> 2.3.0'
 ```
 
 And execute ```bundle install``` command.
