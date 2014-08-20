@@ -9,7 +9,7 @@ Redmine::Plugin.register :redmine_render_markdown_in_repository do
   author_url 'http://makotokw.com'
 end
 
-MARKDOWN_EXTS = %w(md markdown).freeze
+MARKDOWN_EXTS = %w{md markdown}.freeze
 MARKDOWN_EXTS.each do |ext|
   Redmine::MimeType::EXTENSIONS[ext] = 'text/x-markdown'
 end
