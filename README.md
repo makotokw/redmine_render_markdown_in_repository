@@ -1,18 +1,17 @@
 # Redmine Render Markdown in Repository
 
-This plugin renders markdown file in repository.
+This plugin renders markdown file(.md or .markdown) in repository.
 
 ## Requirements
 
 * Redmine 2.0 or later
-* redcarpet
-
+* redcarpet (Redmine 2.4 or earlier)
 
 ## Installation
 
-### Install redcarpet
+### Install redcarpet (Redmine 2.4 or earlier)
 
-Redmine 2.5.0 includes redcarpet already.
+Redmine 2.5.0 includes redcarpet already. You should install redcarpet by using ``Gemfile.local`` if Redmine 2.4 or earlier
 
 Create ``Gemfile.local`` into ``#{RAILS_ROOT}``.
 

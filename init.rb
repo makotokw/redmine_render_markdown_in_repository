@@ -4,7 +4,7 @@ Redmine::Plugin.register :redmine_render_markdown_in_repository do
   name 'Render Markdown in Repository'
   author 'Makoto Kawasaki'
   description 'This plugin renders markdown file in repository'
-  version '0.0.1'
+  version '1.0.0'
   url 'https://github.com/makotokw/redmine_render_markdown_in_repository'
   author_url 'http://makotokw.com'
 end
