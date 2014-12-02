@@ -1,10 +1,10 @@
 require 'redmine'
-require_dependency 'markdown/render'
-require_dependency 'markdown/repositories_controller_patch'
+require_dependency 'markdown_in_repository/render'
+require_dependency 'markdown_in_repository/repositories_controller_patch'
 
 Rails.configuration.to_prepare do
-  unless RepositoriesController.included_modules.include? MarkdownRepositoriesControllerPatch
-    RepositoriesController.send(:include, MarkdownRepositoriesControllerPatch)
+  unless RepositoriesController.included_modules.include? MarkdownInRepository::RepositoriesControllerPatch
+    RepositoriesController.send(:include, MarkdownInRepository::RepositoriesControllerPatch)
   end
 end
 
