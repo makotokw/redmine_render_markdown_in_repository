@@ -10,7 +10,10 @@ module MarkdownInRepository
 
   class MarkdownRender < Redcarpet::Render::HTML
     def block_code(code, language)
-      language ||= :plaintext
+      # convert utf8 for CodeRay
+      code = Redmine::CodesetUtil.to_utf8_by_setting(code)
+      language = CodeRay::FileType[language] if language
+      language ||= :auto
       CodeRay.scan(code, language).div
     end
   end
