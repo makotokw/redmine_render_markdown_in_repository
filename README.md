@@ -1,39 +1,25 @@
 # Redmine Render Markdown in Repository
 
-This plugin renders markdown file(.md or .markdown) in repository.
+This plugin renders markdown file(``.md`` or ``.markdown``) in repository.
 
 ## Requirements
 
-* Redmine 2.0 or later
-* redcarpet (Redmine 2.4 or earlier)
-
+* Redmine 2.5 - 4.x
+* [codelay](https://github.com/rubychan/coderay) (for syntax highlighting)
+ 
 ## Installation
 
-### Install redcarpet (Redmine 2.4 or earlier)
+### Install codelay
 
-Redmine 2.5.0 includes redcarpet already. You should install redcarpet by using ``Gemfile.local`` if Redmine 2.4 or earlier
-
-Create ``Gemfile.local`` into ``#{RAILS_ROOT}``.
-
+1. Create ``Gemfile.local`` into ``#{RAILS_ROOT}``.
+ ```
+# plugins/redmine_render_markdown_in_repositor
+gem 'coderay', '~> 1.1'
 ```
-gem 'redcarpet', '~> 2.3.0'
-```
+2. Execute ```bundle install``` command.
 
-And execute ```bundle install``` command.
+### Install plugin
 
-```
-cd /path/to/redmine/
-bundle install
-```
-
-### Install pluign
-
-
-Copy plugin into ``#{RAILS_ROOT}/plugins`` from GitHub.
-
-```
-cd /path/to/redmine/plugins
-git clone git://github.com/makotokw/redmine_render_markdown_in_repository.git
-```
-
-Restart Redmine after installing plugin.
+1. Copy this plugin into ``#{RAILS_ROOT}/plugins`` from GitHub.
+    - https://github.com/makotokw/redmine_render_markdown_in_repository/releases
+2. Restart Redmine after installing the plugin.
