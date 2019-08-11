@@ -1,9 +1,7 @@
 require_dependency 'repositories_controller'
 
 module MarkdownInRepository
-
   module RepositoriesControllerPatch
-
     def self.included(base)
       base.send(:include, InstanceMethod)
       base.class_eval do
@@ -17,7 +15,7 @@ module MarkdownInRepository
     module InstanceMethod
       def entry_with_markdown
         entry_without_markdown
-        if !performed? && @path =~ /\.(?:#{MARKDOWN_EXTS.join('|')})$/i
+        if !performed? && @path =~ /\.(?:#{MarkdownInRepository::MARKDOWN_EXTS.join('|')})$/i
           markdown = Redcarpet::Markdown.new(
               MarkdownInRepository::MarkdownRender,
               :autolink => true,
