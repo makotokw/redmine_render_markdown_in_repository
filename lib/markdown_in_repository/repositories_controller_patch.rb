@@ -8,7 +8,9 @@ module MarkdownInRepository
       base.send(:include, InstanceMethod)
       base.class_eval do
         unloadable
-        alias_method_chain :entry, :markdown
+        # TODO: use module#prepend
+        alias entry_without_markdown entry
+        alias entry entry_with_markdown
       end
     end
 
