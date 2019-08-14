@@ -5,18 +5,8 @@ This plugin renders markdown file(``.md`` or ``.markdown``) in repository.
 ## Requirements
 
 * Redmine 2.5 - 4.x
-* [codelay](https://github.com/rubychan/coderay) (for syntax highlighting)
  
 ## Installation
-
-### Install codelay
-
-1. Create ``Gemfile.local`` into ``#{RAILS_ROOT}``.
- ```
-# plugins/redmine_render_markdown_in_repositor
-gem 'coderay', '~> 1.1'
-```
-2. Execute ```bundle install``` command.
 
 ### Install plugin
 
